@@ -1,4 +1,5 @@
 <% packages.flatten.sort_by(&:project).group_by(&:project).each do |result| %>
+  <% Rails.logger.info result %>
   <% if  result.first == distro[:project] || result.first == "#{distro[:project]}:NonFree"
     name = _("<b>official release</b>")
   elsif result.first == "#{distro[:project]}:Update"

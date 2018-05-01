@@ -52,9 +52,9 @@ class Seeker < ActiveXML::Node
       return result
     end
 
-    def inspect
-      "<Seeker::Searchresult ##{object_id} @length=#{size}>"
-    end
+    #def inspect
+    #  "<Seeker::Searchresult ##{object_id} @length=#{size}>"
+    #end
 
     def self.logger
       Rails.logger
@@ -154,9 +154,9 @@ class Seeker < ActiveXML::Node
         @relevance = 0
       end
 
-      def inspect
-        "<#{self.class.name} ##{object_id} @length=#{size}>"
-      end
+#      def inspect
+#        "<#{self.class.name} ##{object_id} @length=#{size}>"
+#      end
 
       def add_entry(element)
         if element.__key != @key

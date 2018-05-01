@@ -52,7 +52,7 @@ class PackageController < ApplicationController
     #get extra distributions that are not in the default distribution list
     @extra_packages = @packages.reject{|p| @distributions.map{|d| d[:project]}.include? p.baseproject }
     @extra_dists = @extra_packages.map{|p| p.baseproject}.reject{|d| d.nil?}.uniq.map{|d| { :project => d }}
-
+    #byebug
   end
 
   def categories

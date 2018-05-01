@@ -28,12 +28,18 @@ gem 'mini_magick'
 gem 'minitest'
 gem 'xmlhash', '>= 1.2.2'
 
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'multi_xml'
+
 # needed to collect translatable strings
 # not needed at production
 group :development do
   # no need to load the gem via require
   # we only need the rake tasks
+  gem 'byebug'
   gem 'gettext', '>= 1.9.3', require: false
+  gem 'web-console'
 end
 
 group :production do
